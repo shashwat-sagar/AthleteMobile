@@ -89,3 +89,6 @@ body {
     
 }
 /* Navbar Ends */
+.header1{
+    position: sticky;
+}

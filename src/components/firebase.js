@@ -41,17 +41,6 @@ const signInWithGoogle = async () => {
   }
 };
 
-//const signInWithFacebook = (provider) => {
-  //return firebase
-    //.auth()
-    //.signInWithPopup(provider)
-    //.then((res) => {
-      //return res.user;
-    //})
-    //.catch((er) => {
-//      return er;
-    //});
-//};
 
 const signInWithFacebook = async () => {
   try {
@@ -120,4 +109,5 @@ export {
   registerWithEmailAndPassword,
   sendPasswordResetEmail,
   logout,
+  firebase
 };

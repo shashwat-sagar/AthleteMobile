@@ -11,6 +11,7 @@ import Services from "./components/Services";
 import Home from "./components/Home";
 import SignUp from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
+import DashboardMobile from "./components/DashboardMobile";
 import SignIn from "./components/SignUp";
 import Reset from "./components/Reset";
 import Cards from "./components/Card";
@@ -19,7 +20,7 @@ import Exercise from "./components/Exercise";
 import Stores from "./components/Stores.js";
 
 import Exc from "./components/Exc";
-
+import Mobile from "./components/Mobile";
 
 function App() {
   return (
@@ -27,15 +28,30 @@ function App() {
       <Router>
         <div className="app">
           <Switch>
+
+          <Route path="/dashboardMobile">
+              <DashboardNav />
+              <DashboardMobile />
+              <Stores />
+              <Footer />
+            </Route>
+
+
+            <Route path="/mobile">
+              <Header />
+              <Mobile />
+              <Footer />
+            </Route>
+
             <Route path="/exercises">
-            <DashboardNav />
+              <DashboardNav />
               <Exercise />
               <Stores />
               <Footer />
             </Route>
 
             <Route path="/ex">
-            <DashboardNav />
+              <DashboardNav />
 
               <Exc />
               <Stores />
@@ -63,6 +79,7 @@ function App() {
               <Footer />
             </Route>
 
+            
             <Route path="/premium">
               <Header />
               <SignUp />
@@ -73,7 +90,7 @@ function App() {
             <Route path="/contact">
               <Header />
               <Contact />
-              
+
               <Stores />
               <Footer />
             </Route>

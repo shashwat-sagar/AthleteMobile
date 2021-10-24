@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { auth, signInWithEmailAndPassword, signInWithGoogle, signInWithFacebook} from "./firebase";
+import { auth, signInWithEmailAndPassword } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import './styles/login_form.css'
 function SignIn() {
@@ -79,19 +79,15 @@ function SignIn() {
             </Link>
             <div class="text-center mt-3">
               {" "}
-              <span>Or continue with these social profile</span>{" "}
+              <span>Or continue with Mobile Number</span>{" "}
             </div>
             <div class="d-flex justify-content-center mt-4">
               {" "}
-              <span class="social">
-                <i class="fa fa-google" onClick={signInWithGoogle}></i>
-              </span>{" "}
-              <span class="social">
-                <i class="fa fa-facebook" onClick={signInWithFacebook}></i>
-              </span>{" "}
-              <span class="social">
-                <i class="fa fa-twitter"></i>
-              </span>{" "}
+              <div className="mobile">
+                <Link to="/mobile"><button className="btn-warning">Click Here</button></Link>
+              </div>
+             
+              
             </div>
             <div class="text-center mt-4">
               {" "}
