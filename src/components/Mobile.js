@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { firebase, auth } from "./firebase";
 import { useHistory } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import './styles/login_form.css'
 const Login = () => {
   // Inputs
   const [mynumber, setnumber] = useState("");
@@ -54,18 +54,18 @@ const Login = () => {
   return (
     <>
       
-      <div class="container mt-5 mb-5">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md-6">
-            <div class="card px-5 py-5">
+      <div className="container mt-5 mb-5">
+        <div className="row d-flex align-items-center justify-content-center">
+          <div className="col-md-6">
+            <div className="card px-5 py-5">
               <small>
                 <span id="error" style={{ color: "red" }}></span>
               </small>
               <small>
                 <span id="reset" style={{ color: "greenyellow" }}></span>
               </small>
-              <h3 class="mt-3">Login Here!</h3>{" "}
-              <small class="mt-1 text-muted">
+              <h3 className="mt-3">Login Here!</h3>{" "}
+              <small className="mt-1 text-muted">
                 Welcome to{" "}
                 <font color="#ffc400" size="4px">
                   A
@@ -76,11 +76,12 @@ const Login = () => {
                 </font>
                 lub
               </small>
-              <div class="form-input">
+              <div className="form-input">
                 {" "}
                 <div style={{ display: !show ? "block" : "none" }}>
+                <i className="fa fa-mobile"></i>
                   <input
-                    class="form-control"
+                    className="form-control"
                     id="email"
                     value={mynumber}
                     onChange={(e) => {
@@ -89,30 +90,34 @@ const Login = () => {
                     placeholder="Mobile number"
                   />{" "}
                   <br />
+                  <div className="d-flex justify-content-center mt-4">
                   <div id="recaptcha-container"></div>
+                  </div>
+                  <div className="d-flex justify-content-center mt-4">
                   <button
-                    class="btn btn-primary mt-4 signup "
-                    id="buttonSub"
+                    className="otpButton1"
                     onClick={signin}
                   >
                     Send OTP
                   </button>
+                  </div>
                 </div>
               </div>
-              <div class="form-input">
+              <div className="form-input">
                 <div style={{ display: show ? "block" : "none" }}>
+                  <i className="fa fa-lock"></i>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="email"
                     placeholder={"Enter your OTP"}
                     onChange={(e) => {
                       setotp(e.target.value);
                     }}
                   ></input>{" "}
-                  
-                  <button   class="btn btn-primary mt-4 signup "
-                    id="buttonSub" onClick={ValidateOtp}>Verify</button>
+                  <div className="d-flex justify-content-center mt-4">
+                  <button className="otpButton1" onClick={ValidateOtp}>Verify</button>
+                  </div>
                 </div>
               </div>
             </div>
