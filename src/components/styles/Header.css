@@ -2,9 +2,11 @@
 /* Navbar Start */
 *{
     box-sizing: border-box;
+    
 }
 body {
     background-color: #4d4d4d;
+    
 }
 /* .header {
     position:fixed;
