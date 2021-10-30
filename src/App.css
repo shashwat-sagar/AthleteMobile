@@ -1,1 +1,4 @@
-
+*{
+    scroll-behavior: smooth;
+    transition: 100ms;
+}

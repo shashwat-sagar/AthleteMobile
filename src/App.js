@@ -19,6 +19,8 @@ import Exercise from "./components/Exercise";
 import Stores from "./components/Stores.js";
 
 import Exc from "./components/Exc";
+import Exb from "./components/Exb";
+import Exl from "./components/Exl";
 import Mobile from "./components/Mobile";
 
 function App() {
@@ -28,7 +30,21 @@ function App() {
         <div className="app">
           <Switch>
 
-         
+          <Route path="/exb">
+              <DashboardNav />
+
+              <Exb />
+              <Stores />
+              <Footer />
+            </Route>
+
+            <Route path="/exl">
+              <DashboardNav />
+
+              <Exl />
+              <Stores />
+              <Footer />
+            </Route>
 
 
             <Route path="/mobile">

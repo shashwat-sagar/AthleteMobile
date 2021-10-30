@@ -1,16 +1,16 @@
 import React from "react";
 import "./styles/Exc.css";
-import image1 from "../Images/workouts/ct/ct1.1.png";
-import image2 from "../Images/workouts/ct/ct1.2.png";
-import image3 from "../Images/workouts/ct/ct2.1.png";
-import image4 from "../Images/workouts/ct/ct2.2.png";
-import image5 from "../Images/workouts/ct/ct3.1.png";
-import image6 from "../Images/workouts/ct/ct3.2.png";
-import image7 from "../Images/workouts/ct/ct4.1.png";
-import image8 from "../Images/workouts/ct/ct4.2.png";
-import image9 from "../Images/workouts/ct/ct5.1.png";
-import image10 from "../Images/workouts/ct/ct5.2.png";
-function Exc() {
+import image1 from "../Images/workouts/bb/bb1.1.png";
+import image2 from "../Images/workouts/bb/bb1.2.png";
+import image3 from "../Images/workouts/bb/bb2.1.png";
+import image4 from "../Images/workouts/bb/bb2.2.png";
+import image5 from "../Images/workouts/bb/bb3.1.png";
+import image6 from "../Images/workouts/bb/bb3.2.png";
+import image7 from "../Images/workouts/bb/bb4.1.png";
+import image8 from "../Images/workouts/bb/bb4.2.png";
+import image9 from "../Images/workouts/bb/bb5.1.png";
+import image10 from "../Images/workouts/bb/bb5.2.png";
+function Exb() {
   return (
     <>
      
@@ -24,9 +24,9 @@ function Exc() {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">1. Bench press</h5>
+              <h5 class="card-title">1. Pull-up</h5>
               <p class="card-text">
-              Sets 5 Reps 10 Tempo 2010 Rest 60sec Lie on a flat bench holding a barbell with your hands slightly wider than shoulder-width apart. Brace your core, then lower the bar towards your chest. Press it back up to the start.
+              Sets 5 Reps 6-10 Tempo 2011 Rest 60sec Hold a pull-up bar with an overhand grip, hands shoulder-width apart. Brace your core, then pull yourself up until your lower chest touches the bar. Lower until your arms are straight again.
               </p>
               <p class="card-text">
                 
@@ -45,9 +45,9 @@ function Exc() {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">2. Triceps dip</h5>
+              <h5 class="card-title">2. Bent-over row</h5>
               <p class="card-text">
-              Sets 5 Reps 6-10 Tempo 2110 Rest 60sec Grip rings or parallel bars with your arms straight. Keeping your chest up, bend your elbows to lower your body as far as your shoulders allow. Press back up powerfully to return to the start.
+              Sets 5 Reps 10 Tempo 2010 Rest 60sec Hold a barbell using an overhand grip, hands just outside your legs, and lean forward from the hips. Bend your knees slightly and brace your core, then pull the bar up, leading with your elbows. Lower it back to the start.
               </p>
               <p class="card-text">
                
@@ -66,9 +66,9 @@ function Exc() {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">3. Incline dumbbell press</h5>
+              <h5 class="card-title">3. Chin-up</h5>
               <p class="card-text">
-              Sets 3 Reps 12-15 Tempo 2010 Rest 60sec Lie on an incline bench holding a dumbbell in each hand by your shoulders. Press the weights up until your arms are straight, then lower them back to the start under control.
+              Sets 3 Reps 6-10 Tempo 2011 Rest 60sec Hold a pull-up bar with hands shoulder-width apart, palms facing you. Brace your core, then pull yourself up until your chin is over the bar. Lower until your arms are straight again.
               </p>
               <p class="card-text">
                
@@ -87,9 +87,9 @@ function Exc() {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">4. Incline dumbbell flye</h5>
+              <h5 class="card-title">4. Standing biceps curl</h5>
               <p class="card-text">
-              Sets 3 Reps 12-15 Tempo 2010 Rest 60sec Lie on an incline bench holding a dumbbell in each hand above your face, with your palms facing and a slight bend in your elbows. Lower them to the sides, then bring them back to the top.
+              Sets 3 Reps 12-15 Tempo 2011 Rest 60sec Stand with dumbbells by your sides, palms facing forwards. Keeping your elbows tucked in, curl the weights up, squeezing your biceps at the top. Lower them back to the start.
               </p>
               <p class="card-text">
                 
@@ -108,9 +108,9 @@ function Exc() {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">5 Triceps extension</h5>
+              <h5 class="card-title">5 Seated incline curl</h5>
               <p class="card-text">
-              Sets 3 Reps 12-15 Tempo 2010 Rest 60sec Stand tall holding a dumbbell over your head with both hands, arms straight. Keeping your chest up, lower the weight behind your head, then raise it back to the start.
+              Sets 3 Reps 12-15 Tempo 2011 Rest 60sec Sit on an incline bench with dumbbells by your sides, palms facing forwards. Keeping your elbows tucked in, curl the weights up, squeezing your biceps at the top. Lower them back to the start.
               </p>
               <p class="card-text">
                 
@@ -124,4 +124,4 @@ function Exc() {
   );
 }
 
-export default Exc;
+export default Exb;

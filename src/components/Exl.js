@@ -1,15 +1,15 @@
 import React from "react";
 import "./styles/Exc.css";
-import image1 from "../Images/workouts/ct/ct1.1.png";
-import image2 from "../Images/workouts/ct/ct1.2.png";
-import image3 from "../Images/workouts/ct/ct2.1.png";
-import image4 from "../Images/workouts/ct/ct2.2.png";
-import image5 from "../Images/workouts/ct/ct3.1.png";
-import image6 from "../Images/workouts/ct/ct3.2.png";
-import image7 from "../Images/workouts/ct/ct4.1.png";
-import image8 from "../Images/workouts/ct/ct4.2.png";
-import image9 from "../Images/workouts/ct/ct5.1.png";
-import image10 from "../Images/workouts/ct/ct5.2.png";
+import image1 from "../Images/workouts/la/la1.1.png";
+import image2 from "../Images/workouts/la/la1.2.png";
+import image3 from "../Images/workouts/la/la2.1.png";
+import image4 from "../Images/workouts/la/la2.2.png";
+import image5 from "../Images/workouts/la/la3.1.png";
+import image6 from "../Images/workouts/la/la3.2.png";
+// import image7 from "../Images/workouts/ct/ct4.1.png";
+// import image8 from "../Images/workouts/ct/ct4.2.png";
+// import image9 from "../Images/workouts/ct/ct5.1.png";
+// import image10 from "../Images/workouts/ct/ct5.2.png";
 function Exc() {
   return (
     <>
@@ -59,10 +59,10 @@ function Exc() {
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src={image6} class="img-fluid rounded-start" id="workouts" alt="" />
+            <img src={image5} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
           <div class="col-md-4">
-            <img src={image5} class="img-fluid rounded-start" id="workouts" alt="" />
+            <img src={image6} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -77,49 +77,8 @@ function Exc() {
           </div>
         </div>
       </div>
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src={image9} class="img-fluid rounded-start" id="workouts" alt="" />
-          </div>
-          <div class="col-md-4">
-            <img src={image10} class="img-fluid rounded-start" id="workouts" alt="" />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">4. Incline dumbbell flye</h5>
-              <p class="card-text">
-              Sets 3 Reps 12-15 Tempo 2010 Rest 60sec Lie on an incline bench holding a dumbbell in each hand above your face, with your palms facing and a slight bend in your elbows. Lower them to the sides, then bring them back to the top.
-              </p>
-              <p class="card-text">
-                
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src={image7} class="img-fluid rounded-start" id="workouts" alt="" />
-          </div>
-          <div class="col-md-4">
-            <img src={image8} class="img-fluid rounded-start" id="workouts" alt="" />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">5 Triceps extension</h5>
-              <p class="card-text">
-              Sets 3 Reps 12-15 Tempo 2010 Rest 60sec Stand tall holding a dumbbell over your head with both hands, arms straight. Keeping your chest up, lower the weight behind your head, then raise it back to the start.
-              </p>
-              <p class="card-text">
-                
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       
+     
     </>
   );
 }
