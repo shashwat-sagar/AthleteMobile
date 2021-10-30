@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { firebase, auth } from "./firebase";
+import "firebase/compat/firestore";
+
 import { useHistory } from "react-router-dom";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import './styles/login_form.css'
 const Login = () => {
   // Inputs
+ 
   const [mynumber, setnumber] = useState("");
   const [otp, setotp] = useState("");
   const [show, setshow] = useState(false);
@@ -16,16 +20,18 @@ const Login = () => {
       // maybe trigger a loading screen
       return;
     }
-    if (user) history.replace("/dashboardMobile");
+    if (user) history.replace("/dashboard");
   });
 
   // Sent OTP
   const signin = () => {
+    
     if (mynumber === "" || mynumber.length < 10) return;
 
     let verify = new firebase.auth.RecaptchaVerifier("recaptcha-container");
     auth
       .signInWithPhoneNumber(mynumber, verify)
+      
       .then((result) => {
         setfinal(result);
         alert("code sent");
@@ -44,12 +50,15 @@ const Login = () => {
       .confirm(otp)
       .then((result) => {
         // success
+        
         alert("Logged In");
       })
       .catch((err) => {
         alert("Wrong code");
       });
   };
+
+ 
 
   return (
     <>

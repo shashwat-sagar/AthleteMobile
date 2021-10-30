@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { firebase } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useHistory } from "react-router-dom";
 import {
   auth,
-  registerWithEmailAndPassword,
-  signInWithGoogle,
-  signInWithFacebook
+  registerWithEmailAndPassword
+ 
 } from "./firebase";
 
 function SignUp() {
@@ -14,18 +14,59 @@ function SignUp() {
 //     console.log(res)
 //   }
     const [email, setEmail] = useState("");
+    const [age, setAge] = useState("");
     const [password, setPassword] = useState("");
+    const [mynumber, setNumber] = useState("");
+    const [otp, setotp] = useState("");
+    const [show, setshow] = useState(false);
     const [name, setName] = useState("");
     const [user, loading] = useAuthState(auth);
+    const [final, setfinal] = useState("");
     const history = useHistory();
-    const register = () => {
-      if (!name) alert("Please enter name");
-      registerWithEmailAndPassword(name, email, password);
-    };
     useEffect(() => {
       if (loading) return;
       if (user) history.replace("/dashboard");
     });
+    
+// Sent OTP
+const signup = () => {
+  if (mynumber === "" || mynumber.length < 10) return;
+
+  let verify = new firebase.auth.RecaptchaVerifier("recaptcha-container");
+  auth
+    .signInWithPhoneNumber(mynumber, verify)
+    .then((result) => {
+      setfinal(result);
+      alert("code sent");
+      setshow(true);
+    })
+    .catch((err) => {
+      alert(err);
+      window.location.reload();
+    });
+};
+
+  // Validate OTP
+  const ValidateOtp = () => {
+    if (otp === null || final === null) return;
+    final
+      .confirm(otp)
+      .then((result) => {
+        // success
+        alert("Account Created");
+        register();
+        
+      })
+      .catch((err) => {
+        alert("Wrong code");
+      });
+    };
+    const register = () => {
+      if (!name) alert("Please enter name");
+      registerWithEmailAndPassword(name, email, password, mynumber, age);
+  };
+
+    
   return (
     <div class="container mt-5 mb-5">
       <div class="row d-flex align-items-center justify-content-center">
@@ -41,6 +82,7 @@ function SignUp() {
             <small>
               <span id="success" style={{ color: "green" }}></span>
             </small>
+          <div style={{ display: !show ? "block" : "none" }}>
             <h3 class="mt-3">Join before it gets too late...</h3>{" "}
             <small class="mt-2 text-muted">
               Your Body can stand almost anything.
@@ -88,6 +130,9 @@ function SignUp() {
               <i class="fa fa-user"></i>{" "}
               <input
                 type="phone"
+                value={mynumber}
+                
+                onChange={(e) => setNumber(e.target.value)}
                 class="form-control"
                 placeholder="Phone"
                 id="phone"
@@ -98,6 +143,8 @@ function SignUp() {
               <i class="fa fa-user"></i>{" "}
               <input
                 type="age"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
                 class="form-control"
                 placeholder="Age"
                 id="age"
@@ -117,25 +164,31 @@ function SignUp() {
                 I agree all the statements{" "}
               </label>{" "}
             </div>
-            <button class="btn btn-primary mt-4 signup " id="buttonSub" onClick={register}>
+            <div className="d-flex justify-content-center mt-4">
+                  <div id="recaptcha-container"></div>
+                  </div>
+            <button class="btn btn-primary mt-4 signup " id="buttonSub" onClick={signup}>
               Register
             </button>
-            <div class="text-center mt-3">
-              {" "}
-              <span>Or continue with these social profile</span>{" "}
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-              {" "}
-              <span class="social">
-                <i class="fa fa-google" onClick={signInWithGoogle}></i>
-              </span>{" "}
-              <span class="social">
-                <i class="fa fa-facebook" onClick={signInWithFacebook}></i>
-              </span>{" "}
-              <span class="social">
-                <i class="fa fa-twitter"></i>
-              </span>{" "}
-            </div>
+          </div>
+        <div className="form-input">
+          <div style={{ display: show ? "block" : "none" }}>
+      
+                  <i className="fa fa-lock"></i>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="email"
+                    placeholder={"Enter your OTP"}
+                    onChange={(e) => {
+                      setotp(e.target.value);
+                    }}
+                  ></input>{" "}
+                  <div className="d-flex justify-content-center mt-4">
+                  <button className="otpButton1" onClick={ValidateOtp}>Verify</button>
+                  </div>
+          </div>  
+        </div> 
             <div class="text-center mt-4">
               {" "}
               <span>Already a member? </span>{" "}

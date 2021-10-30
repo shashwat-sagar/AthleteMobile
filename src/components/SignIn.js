@@ -78,11 +78,11 @@ function SignIn() {
               Forgot Password
             </Link>
             <br />
-            <div class="text-center mt-3">
+            {/* <div class="text-center mt-3">
               {" "}
               <span>Or continue with Mobile OTP</span>{" "}
-            </div>
-            <div class="d-flex justify-content-center mt-4">
+            </div> */}
+            {/* <div class="d-flex justify-content-center mt-4">
               {" "}
               <div className="mobile">
                 <Link to="/mobile"><button class="otpButton"
@@ -90,7 +90,7 @@ function SignIn() {
               </div>
              
               
-            </div>
+            </div> */}
             <div class="text-center mt-4">
               {" "}
               <span>New here?</span>{" "}

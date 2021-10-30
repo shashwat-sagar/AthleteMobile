@@ -33,6 +33,8 @@ const signInWithGoogle = async () => {
         name: user.displayName,
         authProvider: "google",
         email: user.email,
+       
+        
       });
     }
   } catch (err) {
@@ -42,6 +44,30 @@ const signInWithGoogle = async () => {
 };
 
 
+const registerWithPhoneNumber = async (phone) => {
+  try {
+    const res = await auth.signInWithPhoneNumber;
+    const user = res.user;
+    const query = await db
+      .collection("users")
+      .where("uid", "==", user.uid)
+      .get();
+    if (query.docs.length === 0) {
+      await db.collection("users").get({
+        uid: user.uid,
+        name: user.displayName,
+        phone: user.phone,
+        email: user.email,
+       
+        
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+    
+};
 const signInWithFacebook = async () => {
   try {
     const res = await auth.signInWithPopup(facebookProvider);
@@ -56,6 +82,7 @@ const signInWithFacebook = async () => {
         name: user.displayName,
         authProvider: "google",
         email: user.email,
+        
       });
     }
   } catch (err) {
@@ -72,7 +99,7 @@ const signInWithEmailAndPassword = async (email, password) => {
     alert(err.message);
   }
 };
-const registerWithEmailAndPassword = async (name, email, password) => {
+const registerWithEmailAndPassword = async (name, email, password, phone, age) => {
   try {
     const res = await auth.createUserWithEmailAndPassword(email, password);
     const user = res.user;
@@ -81,6 +108,9 @@ const registerWithEmailAndPassword = async (name, email, password) => {
       name,
       authProvider: "local",
       email,
+      password,
+      phone,
+      age,
     });
   } catch (err) {
     console.error(err);
@@ -108,6 +138,7 @@ export {
   signInWithEmailAndPassword,
   registerWithEmailAndPassword,
   sendPasswordResetEmail,
+  registerWithPhoneNumber,
   logout,
   firebase
 };

@@ -8,6 +8,8 @@ import "./styles/Dashboard.css";
 function Dashboard() {
   const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
+  const [mynumber, setNumber] = useState("");
+  const [age, setAge] = useState("");
   const history = useHistory();
   const fetchUserName = async () => {
     try {
@@ -17,6 +19,8 @@ function Dashboard() {
         .get();
       const data = await query.docs[0].data();
       setName(data.name);
+      setNumber(data.phone);
+      setAge(data.age);
     } catch (err) {
       console.error(err);
       alert("An error occured while fetching user data");
@@ -32,6 +36,8 @@ function Dashboard() {
       <div className="dashboard__container">
         Logged in as
         <div>{name}</div>
+        <div>{age}</div>
+        <div>{mynumber}</div>
         <div>{user?.email}</div>
         <button className="dashboard__btn" onClick={logout}>
           Logout
