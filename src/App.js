@@ -11,7 +11,6 @@ import Services from "./components/Services";
 import Home from "./components/Home";
 import SignUp from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
-import DashboardMobile from "./components/DashboardMobile";
 import SignIn from "./components/SignUp";
 import Reset from "./components/Reset";
 import Cards from "./components/Card";
@@ -29,12 +28,7 @@ function App() {
         <div className="app">
           <Switch>
 
-          <Route path="/dashboardMobile">
-              <DashboardNav />
-              <DashboardMobile />
-              <Stores />
-              <Footer />
-            </Route>
+         
 
 
             <Route path="/mobile">
