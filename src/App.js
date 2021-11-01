@@ -18,7 +18,7 @@ import DashboardNav from "./components/Dashboard_Nav";
 import Exercise from "./components/Exercise";
 import Stores from "./components/Stores.js";
 import Videocarosel from "./components/Videocarosel.js";
-
+// import PrivacyPolicy from "./components/PrivacyPolicy";
 import Exc from "./components/Exc";
 import Exb from "./components/Exb";
 import Exl from "./components/Exl";
@@ -33,8 +33,9 @@ function App() {
         <div className="app">
           <Switch>
 
+        
+
           <Route path="/exb">
-         
               <DashboardNav />
               <Exb />
               <Videocarosel />
