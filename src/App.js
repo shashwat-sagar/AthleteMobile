@@ -17,11 +17,14 @@ import Cards from "./components/Card";
 import DashboardNav from "./components/Dashboard_Nav";
 import Exercise from "./components/Exercise";
 import Stores from "./components/Stores.js";
+import Videocarosel from "./components/Videocarosel.js";
 
 import Exc from "./components/Exc";
 import Exb from "./components/Exb";
 import Exl from "./components/Exl";
+import Exbs from "./components/Exbs";
 import Mobile from "./components/Mobile";
+
 
 function App() {
   return (
@@ -31,17 +34,26 @@ function App() {
           <Switch>
 
           <Route path="/exb">
+         
               <DashboardNav />
-
               <Exb />
+              <Videocarosel />
+              <Stores />
+              <Footer />
+            </Route>
+
+            <Route path="/exbs">
+              <DashboardNav />
+              <Exbs />
+              <Videocarosel />
               <Stores />
               <Footer />
             </Route>
 
             <Route path="/exl">
               <DashboardNav />
-
               <Exl />
+              <Videocarosel />
               <Stores />
               <Footer />
             </Route>
@@ -62,8 +74,8 @@ function App() {
 
             <Route path="/ex">
               <DashboardNav />
-
               <Exc />
+              <Videocarosel />
               <Stores />
               <Footer />
             </Route>
@@ -135,6 +147,7 @@ function App() {
             </Route>
 
             <Route path="/">
+              
               <Header />
               <Home />
               <Stores />

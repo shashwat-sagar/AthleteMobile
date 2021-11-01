@@ -14,8 +14,8 @@ function Exc() {
   return (
     <>
      
-      <div class="card mb-3">
-        <div class="row g-0">
+     <div class="card mb-3" id="cardss">
+         <div class="row g-0" id="Card1">
           <div class="col-md-4">
             <img src={image1} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
@@ -23,7 +23,7 @@ function Exc() {
             <img src={image2} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
           <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-body" id="cardB">
               <h5 class="card-title">1. Bench press</h5>
               <p class="card-text">
               Sets 5 Reps 10 Tempo 2010 Rest 60sec Lie on a flat bench holding a barbell with your hands slightly wider than shoulder-width apart. Brace your core, then lower the bar towards your chest. Press it back up to the start.
@@ -35,8 +35,8 @@ function Exc() {
           </div>
         </div>
       </div>
-      <div class="card mb-3">
-        <div class="row g-0">
+     <div class="card mb-3" id="cardss">
+         <div class="row g-0" id="Card1">
           <div class="col-md-4">
             <img src={image3} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
@@ -44,7 +44,7 @@ function Exc() {
             <img src={image4} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
           <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-body" id="cardB">
               <h5 class="card-title">2. Triceps dip</h5>
               <p class="card-text">
               Sets 5 Reps 6-10 Tempo 2110 Rest 60sec Grip rings or parallel bars with your arms straight. Keeping your chest up, bend your elbows to lower your body as far as your shoulders allow. Press back up powerfully to return to the start.
@@ -56,8 +56,8 @@ function Exc() {
           </div>
         </div>
       </div>
-      <div class="card mb-3">
-        <div class="row g-0">
+     <div class="card mb-3" id="cardss">
+         <div class="row g-0" id="Card1">
           <div class="col-md-4">
             <img src={image5} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
@@ -65,7 +65,7 @@ function Exc() {
             <img src={image6} class="img-fluid rounded-start" id="workouts" alt="" />
           </div>
           <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-body" id="cardB">
               <h5 class="card-title">3. Incline dumbbell press</h5>
               <p class="card-text">
               Sets 3 Reps 12-15 Tempo 2010 Rest 60sec Lie on an incline bench holding a dumbbell in each hand by your shoulders. Press the weights up until your arms are straight, then lower them back to the start under control.

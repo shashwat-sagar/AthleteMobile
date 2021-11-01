@@ -9,7 +9,7 @@ import logo4 from "../Images/png/4.png"
 // import logo6 from "../Images/png/6.png"
 // import logo7 from "../Images/png/7.png"
 // import logo8 from "../Images/png/8.png"
-// import logo9 from "../Images/png/9.png"
+import logo9 from "../Images/png/9.png"
 // import logo10 from "../Images/png/10.png"
 
 function Exercise() {
@@ -57,7 +57,21 @@ function Exercise() {
           </div>
         </div>
       </div>
+      <div class="cardCon2">
+        <div class="card" id="cardBody2">
+          <img
+            src={logo9}
+            id="exLogo" alt="/"
+          />
 
+          <div class="card-body" >
+          <h3 id="excercisesCards"><Link className="linkk" to="/exbs"><button className="cardButton">Workout 4</button></Link></h3>
+            <p class="card-text">
+            Back And Shoulders
+            </p>
+          </div>
+        </div>
+      </div>
     
     </div>
   );
