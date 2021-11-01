@@ -174,14 +174,12 @@ function Home() {
                     <div class="card-body">
                       <h5 class="card-title">
                         <font color="#ffc400" size="5px">
-                          C
+                          B
                         </font>
-                        ard
+                        est In Class
                       </h5>
                       <p class="card-text">
-                        <font color="#ffc400">Some</font> quick example text to
-                        build on the card title and make up the bulk of the
-                        card's content.
+                        <font color="#ffc400">Best</font> in class fecilities with well equiped gym equipments.
                       </p>
                     </div>
                   </div>
