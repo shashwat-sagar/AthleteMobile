@@ -65,12 +65,15 @@ function SignIn() {
                 class="form-control"
                 placeholder="password"
                 id="password" 
+                
+              
               />{" "}
             </div>
             <button
               class="btn btn-primary mt-4 signup "
               id="buttonSub"
               onClick={() => signInWithEmailAndPassword(email, password)}
+              
             >
               Login
             </button>

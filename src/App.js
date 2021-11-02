@@ -32,8 +32,13 @@ function App() {
       <Router>
         <div className="app">
           <Switch>
+            
 
-        
+          <Route path="/aboutTrainer">
+            <Header />
+              <Stores />
+              <Footer />
+            </Route>
 
           <Route path="/exb">
               <DashboardNav />
