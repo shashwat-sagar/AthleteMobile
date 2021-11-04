@@ -1,15 +1,15 @@
 import React from "react";
 import image from "../Images/1.png";
-import "./styles/card-style.css";
+import "./styles/CardUi.css";
 import { Link } from "react-router-dom";
 // import "./About.css"
 
 function About() {
   return (
-    <div className="TrainerCardUI">
+    <div className="CardUi">
       <div className="card text-center">
         <div className="overflow">
-          <img src="" id="trainerImg" alt={image} className="trainImg" />
+          <img src={image} id="trainerImg" alt={image} className="trainImg" />
         </div>
         <div className="card-body text-dark">
           <h6 className="card-title text-warning">Mr. Prashant Praksdh Upadhayay</h6>

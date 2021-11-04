@@ -24,6 +24,7 @@ import Exb from "./components/Exb";
 import Exl from "./components/Exl";
 import Exbs from "./components/Exbs";
 import Mobile from "./components/Mobile";
+import Trainer from "./components/Trainer";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
 
           <Route path="/aboutTrainer">
             <Header />
+            <Trainer />
               <Stores />
               <Footer />
             </Route>
