@@ -20,7 +20,7 @@ function About() {
           <Link to="/aboutTrainer">
           <button className="trainerPageButton">
           
-            Go Anywhere
+           Trainer
             </button>
           </Link>
         </div>
