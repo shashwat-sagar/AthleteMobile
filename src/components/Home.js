@@ -99,14 +99,12 @@ function Home() {
                     <div class="card-body">
                       <h5 class="card-title">
                         <font color="#ffc400" size="5px">
-                          C
+                        Best in training 
                         </font>
-                        ard
+                       
                       </h5>
                       <p class="card-text">
-                        <font color="#ffc400">Some</font> quick example text to
-                        build on the card title and make up the bulk of the
-                        card's content.
+                        <font color="#ffc400">Ent</font>husiastic trainers/instructors engaging and well prepared to train our trainees
                       </p>
                     </div>
                   </div>
@@ -247,14 +245,13 @@ function Home() {
                     <div class="card-body">
                       <h5 class="card-title">
                         <font color="#ffc400" size="5px">
-                          C
+                        Best in Equipmentation
                         </font>
-                        ard
+                      
                       </h5>
                       <p class="card-text">
-                        <font color="#ffc400">Some</font> quick example text to
-                        build on the card title and make up the bulk of the
-                        card's content.
+                        <font color="#ffc400">High</font> quality And diverse range equipment types 
+
                       </p>
                     </div>
                   </div>
