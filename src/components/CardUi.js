@@ -12,7 +12,7 @@ function About() {
           <img src={image} id="trainerImg" alt={image} className="trainImg" />
         </div>
         <div className="card-body text-dark">
-          <h6 className="card-title text-warning">Mr. Prashant Praksdh Upadhayay</h6>
+          <h6 className="card-title text-warning">Mr. Prashant Prakash Upadhayay</h6>
           <br></br>
           <p className="card-text text-secondary">
            Trained by Gold's Gym Fitness Institute 
